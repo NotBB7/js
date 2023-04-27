@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // Boîte de dialogue pour demander la moyenne au stagiaire
+        var moyenne = prompt("Veuillez entrer la moyenne sur 20 du stagiaire de l'Afpa:");
+
+        // Vérification si la moyenne est un nombre valide entre 0 et 20
+        if (isNaN(moyenne) || moyenne < 0 || moyenne > 20) {
+            console.log("La moyenne entrée n'est pas valide. Veuillez entrer une valeur entre 0 et 20.");
+        } else {
+            // Conversion de la moyenne en nombre
+            moyenne = parseFloat(moyenne);
+
+            // Condition pour afficher le message correspondant à la moyenne
+            if (moyenne === 0) {
+                console.log("Un rendez-vous sera programmé en raison de la moyenne.");
+            } else if (moyenne >= 1 && moyenne <= 5) {
+                console.log("Trimestre insuffisant.");
+            } else if (moyenne >= 6 && moyenne <= 10) {
+                console.log("Trimestre moyen.");
+            } else if (moyenne >= 11 && moyenne <= 13) {
+                console.log("Bon trimestre.");
+            } else if (moyenne >= 14 && moyenne <= 18) {
+                console.log("Excellent trimestre.");
+            } else if (moyenne > 18) {
+                console.log("Félicitations.");
+            }
+        }
+    </script>
+</body>
+
+</html>
