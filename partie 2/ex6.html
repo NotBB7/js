@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+// Demander à l'utilisateur de saisir un numéro de mois
+var mois = prompt("Veuillez saisir un numéro de mois entre 1 et 12 :");
+
+// Convertir la saisie en nombre entier
+mois = parseInt(mois);
+
+// Vérifier si la saisie est valide
+if (mois >= 1 && mois <= 12) {
+  // Tableau des noms des mois
+  var nomsMois = [
+    "Janvier",
+    "Février",
+    "Mars",
+    "Avril",
+    "Mai",
+    "Juin",
+    "Juillet",
+    "Août",
+    "Septembre",
+    "Octobre",
+    "Novembre",
+    "Décembre"
+  ];
+
+  // Afficher le mois correspondant dans la console
+  console.log(nomsMois[mois - 1]);
+} else {
+  // La saisie est invalide
+  console.log("Le numéro de mois saisi n'est pas valide !");
+}
+
+
+    </script>
+</body>
+</html>
