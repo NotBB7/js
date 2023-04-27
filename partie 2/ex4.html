@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+// Demande à l'utilisateur de renseigner son genre
+var genre = prompt("Veuillez indiquer votre genre (homme ou femme) :");
+
+// Vérifie si le genre est valide
+if (genre !== "homme" && genre !== "femme") {
+  console.log("Genre non valide. Veuillez indiquer 'homme' ou 'femme'.");
+} else {
+  // Demande à l'utilisateur de renseigner son âge
+  var age = prompt("Veuillez indiquer votre âge :");
+
+  // Vérifie si l'âge est un nombre valide
+  if (isNaN(age)) {
+    console.log("Âge non valide. Veuillez indiquer un nombre.");
+  } else {
+    // Convertit l'âge en nombre entier
+    age = parseInt(age);
+
+    // Vérifie le genre et l'âge pour afficher le message approprié
+    if (genre === "homme") {
+      if (age >= 18) {
+        console.log("L'utilisateur est de type masculin et majeur.");
+      } else {
+        console.log("L'utilisateur est de type masculin et mineur.");
+      }
+    } else {
+      if (age >= 18) {
+        console.log("L'utilisatrice est de type féminin et majeure.");
+      } else {
+        console.log("L'utilisatrice est de type féminin et mineure.");
+      }
+    }
+  }
+}
+
+    </script>
+</body>
+</html>
