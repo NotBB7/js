@@ -14,11 +14,22 @@
 
     <script>
 
+
+        //résultat 1
         var confirmationMessage = "En cliquant sur OK, je confirme que je rentre sur ce site en 'mon âme et conscience'";
         var confirmationResult = window.confirm(confirmationMessage);
 
         if (confirmationResult) {
             console.log("L'utilisateur a cliqué sur OK");
+        } else {
+            console.log("L'utilisateur n'a pas validé");
+        }
+
+
+
+        //Résultat 2
+        if (window.confirm("En cliquant sur OK, je confirme que je rentre sur ce site en 'mon âme et conscience'")) {
+            console.log("L'utilisateur a cliqué OK");
         } else {
             console.log("L'utilisateur n'a pas validé");
         }
